@@ -10,11 +10,15 @@ from openai import OpenAI
 from datetime import datetime, timedelta
 import json
 import os
+from dotenv import load_dotenv
 
-# Configuration
-ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyM1BaWEYiLCJzdWIiOiI3R0hWU0siLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyY2YgcmFjdCByc2V0IHJociBycHJvIHJzbGUiLCJleHAiOjE3MzQwNzE1NTMsImlhdCI6MTczNDA0Mjc1M30.dV8khx1YdJ6atDHJqDqgyH8dMV66XTSmhomyvwQm6qw'  # Replace with your Fitbit access token
-ASSEMBLYAI_API_KEY = 'ce51aa3035de4be2b79991cae4732f0c'  # Replace with your AssemblyAI API key
-OPENAI_API_KEY = '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'  # Replace with your OpenAI API key
+# Load environment variables
+load_dotenv()
+
+# Configuration from environment variables
+ACCESS_TOKEN = os.getenv('FITBIT_ACCESS_TOKEN')
+ASSEMBLYAI_API_KEY = os.getenv('ASSEMBLYAI_API_KEY')
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 aai.settings.api_key = ASSEMBLYAI_API_KEY
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
