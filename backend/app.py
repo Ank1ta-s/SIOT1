@@ -13,12 +13,12 @@ import os
 
 
 # Configuration
-ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyM1BaWEYiLCJzdWIiOiI3R0hWU0siLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyY2YgcmFjdCByc2V0IHJociBycHJvIHJzbGUiLCJleHAiOjE3MzQwNzE1NTMsImlhdCI6MTczNDA0Mjc1M30.dV8khx1YdJ6atDHJqDqgyH8dMV66XTSmhomyvwQm6qw'  # Replace with your Fitbit access token
-ASSEMBLYAI_API_KEY = 'ce51aa3035de4be2b79991cae4732f0c'  # Replace with your AssemblyAI API key
-OPENAI_API_KEY = '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'  # Replace with your OpenAI API key
+ACCESS_TOKEN = ''  # Replace with your Fitbit access token
+ASSEMBLYAI_API_KEY = ''  # Replace with your AssemblyAI API key
+OPENAI_API_KEY = ''  # Replace with your OpenAI API key
 
 aai.settings.api_key = ASSEMBLYAI_API_KEY
-openai_client = OpenAI(api_key='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')
+openai_client = OpenAI(api_key)
 
 HEADERS = {'Authorization': f'Bearer {ACCESS_TOKEN}', 'Accept': 'application/json'}
 SAMPLERATE = 44100  # Sample rate
